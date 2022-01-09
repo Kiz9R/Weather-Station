@@ -96,7 +96,7 @@ class Display{
         const apiTime="V2QRZHDPTXAU";
 
 
-        fetch(`http://api.timezonedb.com/v2.1/get-time-zone?key=${apiTime}&format=json&by=position&lat=${lati}&lng=${longi}`).then(tim=>tim.json()).then(data2=>{
+        fetch(`https://api.timezonedb.com/v2.1/get-time-zone?key=${apiTime}&format=json&by=position&lat=${lati}&lng=${longi}`).then(tim=>tim.json()).then(data2=>{
             console.log(data2);
             showTime(data2);
         })
