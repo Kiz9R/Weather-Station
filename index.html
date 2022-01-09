@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Station</title>
+  </head>
+  <body>
+    <div class="search">
+      <div
+        class="feedback feedback1 alert alert-danger text-capitalize text-center"
+      >
+        <h1>ERROR</h1>
+      </div>
+      <div class="card">
+        <div class="card-title text-center text-capitalize">
+          <h3>search city</h3>
+        </div>
+        <form id="wheatherForm">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control text-capitalize cityInput"
+              id="cityInput"
+            />
+            <div class="input-group-append">
+              <button type="submit" class="text-capitalize submitBtn">
+                submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="start">
+      <div class="container">
+        <div class="current-info">
+          <div class="date-container">
+            <div class="time" id="time">
+              12:30
+              <span id="am-pm">AM</span>
+            </div>
+            <div class="date" id="date">Monday, 24 May</div>
+            <div class="others" id="current-weather-items">
+              <div class="weather-item">
+                <div>Humidity</div>
+                <div id="humidity">95.2%</div>
+              </div>
+              <div class="weather-item">
+                <div>Wind Speed</div>
+                <div id="speed">121</div>
+              </div>
+              <div class="weather-item">
+                <div>Temperature</div>
+                <div id="temp1">222</div>
+              </div>
+              <div class="weather-item">
+                <div>Sunrise</div>
+                <div id="rise">121</div>
+              </div>
+              <div class="weather-item">
+                <div>Sunset</div>
+                <div id="set">121</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="place-container">
+            <div class="time-zone" id="time-zone">Kolkata</div>
+            <div id="country" class="country"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="future-forcast">
+        <div class="today" id="current-temp">
+          <img
+            src="http://openweathermap.org/img/wn/10d@2x.png"
+            alt="Weather-icon"
+            class="w-icon"
+          />
+          <div class="other">
+            <div class="day">Monday</div>
+            <div class="temp">Night - 25.6&#176;C</div>
+            <div class="temp">Day - 35.6&#176;C</div>
+          </div>
+        </div>
+
+        <div class="weather-forcast" id="weather-forcast">
+          <div class="weather-forcast-item">
+            <div class="day">Tue</div>
+            <img
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="Weather-icon"
+              class="w-icon"
+            />
+            <div class="temp">Night - 25.6&#176;C</div>
+            <div class="temp">Day - 35.6&#176;C</div>
+          </div>
+        </div>
+
+        <!-- <div class="weather-forcast" id="weather-forcast">
+          <div class="weather-forcast-item">
+            <div class="day">Wed</div>
+            <img
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="Weather-icon"
+              class="w-icon"
+            />
+            <div class="temp">Night - 25.6&#176;C</div>
+            <div class="temp2">Day - 35.6&#176;C</div>
+          </div>
+        </div>
+
+        <div class="weather-forcast" id="weather-forcast">
+          <div class="weather-forcast-item">
+            <div class="day">Thur</div>
+            <img
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="Weather-icon"
+              class="w-icon"
+            />
+            <div class="temp">Night - 25.6&#176;C</div>
+            <div class="temp2">Day - 35.6&#176;C</div>
+          </div>
+        </div>
+
+        <div class="weather-forcast" id="weather-forcast">
+          <div class="weather-forcast-item">
+            <div class="day">Fri</div>
+            <img
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="Weather-icon"
+              class="w-icon"
+            />
+            <div class="temp">Night - 25.6&#176;C</div>
+            <div class="temp2">Day - 35.6&#176;C</div>
+          </div>
+        </div>
+
+        <div class="weather-forcast" id="weather-forcast">
+          <div class="weather-forcast-item">
+            <div class="day">Sat</div>
+            <img
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="Weather-icon"
+              class="w-icon"
+            />
+            <div class="temp">Night - 25.6&#176;C</div>
+            <div class="temp2">Day - 35.6&#176;C</div>
+          </div>
+        </div> -->
+        <!-- <div class="weather-forcast" id="weather-forcast"> -->
+          <!-- <div class="weather-forcast-item">
+            <div class="day">Sun</div>
+            <img
+              src="http://openweathermap.org/img/wn/10d@2x.png"
+              alt="Weather-icon"
+              class="w-icon"
+            />
+            <div class="temp">Night - 25.6&#176;C</div>
+            <div class="temp">Day - 35.6&#176;C</div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- javascript -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./weather.js"></script>
+  </body>
+</html>
