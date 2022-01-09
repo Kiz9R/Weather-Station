@@ -101,6 +101,11 @@ class Display{
             showTime(data2);
         })
 
+        // fetch(`https://cors-anywhere.herokuapp.com/https://api.timezonedb.com/v2.1/get-time-zone?key=${apiTime}&format=json&by=position&lat=${lati}&lng=${longi}`).then(tim=>tim.json()).then(data2=>{
+        //     console.log(data2);
+        //     showTime(data2);
+        // })
+
         
 
     }
@@ -191,6 +196,7 @@ function showWeatherData(data1){
     })
     // currentTempEl.innerHTML=firstDayForcast;
     weatherForecastEl.innerHTML=otherDayForcast;
+    console.log(window.moment(19800).format('h:mm A'));
     
 }
 
@@ -209,5 +215,5 @@ function showTime(data2){
 
     time.innerHTML=`<span>${window.moment(formatted).format('h:mm A')}</span>`;
 
-    // console.log(window.moment(1641730779*1000).format('h:mm A'));
+    // console.log(window.moment(19800).format('h:mm A'));
 }
