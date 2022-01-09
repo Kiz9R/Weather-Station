@@ -89,3 +89,26 @@ input:focus {
 .start {
   display: none;
 }
+
+.aboutme {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--googlefont3);
+  text-align: center;
+  color: var(--candy);
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  color: var(--candy);
+  transform: translateX(-90px);
+}
+
+.aboutspan {
+  font-family: var(--googlefont2);
+  text-align: center;
+  color: var(--candy);
+  font-weight: 700;
+  font-size: 20px;
+}
