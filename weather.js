@@ -93,13 +93,13 @@ class Display{
 
         // TimeZone...........................
 
-        const apiTime="V2QRZHDPTXAU";
+        // const apiTime="V2QRZHDPTXAU";
 
 
-        fetch(`https://api.timezonedb.com/v2.1/get-time-zone?key=${apiTime}&format=json&by=position&lat=${lati}&lng=${longi}`).then(tim=>tim.json()).then(data2=>{
-            console.log(data2);
-            showTime(data2);
-        })
+        // fetch(`https://api.timezonedb.com/v2.1/get-time-zone?key=${apiTime}&format=json&by=position&lat=${lati}&lng=${longi}`).then(tim=>tim.json()).then(data2=>{
+        //     console.log(data2);
+        //     showTime(data2);
+        // })
 
         // fetch(`https://cors-anywhere.herokuapp.com/https://api.timezonedb.com/v2.1/get-time-zone?key=${apiTime}&format=json&by=position&lat=${lati}&lng=${longi}`).then(tim=>tim.json()).then(data2=>{
         //     console.log(data2);
@@ -203,17 +203,17 @@ function showWeatherData(data1){
 
 // TimeZone....................................................
 
-function showTime(data2){
+// function showTime(data2){
 
-    const time=document.getElementById('time');
-    const ampm=document.getElementById('am-pm');
-    const date=document.getElementById('date');
+//     const time=document.getElementById('time');
+//     const ampm=document.getElementById('am-pm');
+//     const date=document.getElementById('date');
 
-    const {gmtoffset,formatted}=data2;
+//     const {gmtoffset,formatted}=data2;
 
-    // time.innerHTML=`<span>${window.moment(gmtoffset).format('HH:mm a')}</span>`;
+//     // time.innerHTML=`<span>${window.moment(gmtoffset).format('HH:mm a')}</span>`;
 
-    time.innerHTML=`<span>${window.moment(formatted).format('h:mm A')}</span>`;
+//     time.innerHTML=`<span>${window.moment(formatted).format('h:mm A')}</span>`;
 
-    // console.log(window.moment(19800).format('h:mm A'));
-}
+//     // console.log(window.moment(19800).format('h:mm A'));
+// }
